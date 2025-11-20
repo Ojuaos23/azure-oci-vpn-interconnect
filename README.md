@@ -131,9 +131,9 @@ IP vm-azure-interconnect (10.0.1.4) > 10.1.2.189: ICMP echo request
 ## 👤 About
 
 **Created by:** Oluwatobi Ojuade  
-**Portfolio:** [your-website.com](https://your-website.com)  
-**LinkedIn:** [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)  
-**GitHub:** [[@ojuaos23](https://github.com/Ojuaos23)
+**Portfolio:** [(https://ojuaos23.github.io/]
+**LinkedIn:** [(https://www.linkedin.com/in/oluwatobi-ojuade-9709ab343/)]
+**GitHub:** [@ojuaos23](https://github.com/Ojuaos23)
 
 ## 📄 License
 
