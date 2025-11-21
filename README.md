@@ -105,16 +105,19 @@ FastConnect/ExpressRoute would be recommended for:
 ### Test Methodology
 Using network packet analysis from Azure VM to verify cross-cloud connectivity:
 ```bash
-# Command executed on Azure VM (10.0.1.4)
 sudo tcpdump -i eth0 icmp and host 10.1.2.189
 ```
 
 ### Results
+
+![tcpdump Output Showing Packets Flowing](screenshots/proof/tcpdump-output.png)
+
+**What the output shows:**
 ```
 IP vm-azure-interconnect (10.0.1.4) > 10.1.2.189: ICMP echo request
 IP vm-azure-interconnect (10.0.1.4) > 10.1.2.189: ICMP echo request
-IP vm-azure-interconnect (10.0.1.4) > 10.1.2.189: ICMP echo request
 ```
+
 
 ### ✅ What This Proves:
 1. ✔️ Azure VM successfully routes OCI-destined traffic to VPN Gateway
