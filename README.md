@@ -58,7 +58,7 @@ FastConnect/ExpressRoute would be recommended for:
 
   ## 🔷 1. Architecture Diagram
 
-![Azure-OCI VPN Architecture](architecture/azure-oci-architecture-diagram.png)
+![azure-oci-vpn-interconnect](architecture/azure-oci-architecture-diagram.png)
 
 **Network Overview:**
 - **Azure VNet:** 10.0.0.0/16 connected via VPN Gateway
