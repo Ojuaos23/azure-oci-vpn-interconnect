@@ -56,6 +56,15 @@ FastConnect/ExpressRoute would be recommended for:
 - Allows workload portability and cloud bursting scenarios
 - Reduces vendor lock-in while maintaining secure connectivity
 
+  ## 🔷 1. Architecture Diagram
+
+![Azure-OCI VPN Architecture](architecture/azure-oci-architecture-diagram.png)
+
+**Network Overview:**
+- **Azure VNet:** 10.0.0.0/16 connected via VPN Gateway
+- **OCI VCN:** 10.1.0.0/16 connected via Dynamic Routing Gateway
+- **IPSec Tunnels:** Dual redundant tunnels for high availability
+- **Encrypted Traffic:** All cross-cloud communication secured via IPSec
 ---
 ## 🔷 2. Microsoft Azure Configuration
 
@@ -68,6 +77,28 @@ FastConnect/ExpressRoute would be recommended for:
 | Tunnels | 2 (active-active) | High availability |
 
 📸 *See `screenshots/azure/` for detailed configurations*
+
+---
+
+## 🔶 3. Oracle Cloud Infrastructure (OCI) Configuration
+
+### Network Summary
+| Component | Value | Purpose |
+|-----------|-------|---------|
+| VCN CIDR | 10.1.0.0/16 | OCI network range |
+| VM Private IP | 10.1.2.189 | Test instance |
+| DRG | Dynamic Routing Gateway | Cross-cloud connectivity |
+| Tunnels | 2 (UP status) | High availability |
+
+### Key Components:
+- **Dynamic Routing Gateway (DRG):** Routes traffic between VCN and Azure
+- **IPSec Connection:** Two tunnels in UP status
+- **Security Lists:** Allow ICMP and SSH from Azure (10.0.0.0/16)
+- **Route Tables:** Direct Azure-destined traffic to DRG
+
+📸 *See `screenshots/oci/` for detailed configurations*
+
+---
 
 ## 🟩 4. Traffic Verification (Proof)
 
@@ -96,6 +127,33 @@ IP vm-azure-interconnect (10.0.1.4) > 10.1.2.189: ICMP echo request
 **Note:** ICMP replies were blocked by the OCI VM's OS firewall (firewalld), not by the VPN infrastructure. This was confirmed through OCI console logs and Oracle documentation. The one-way packet flow proves the VPN interconnect is fully functional.
 
 📸 *Screenshot: `screenshots/proof/tcpdump-output.png`*
+
+---
+
+## 🛠️ 5. Skills Demonstrated
+
+### Cloud Platforms
+- ☁️ Microsoft Azure (VPN Gateway, VNets, NSGs)
+- ☁️ Oracle Cloud Infrastructure (DRG, VCN, Security Lists)
+
+### Networking
+- 🔐 IPSec tunnel configuration and troubleshooting
+- 🌐 Cross-cloud routing design
+- 📊 Network packet analysis (tcpdump)
+- 🔒 Security group rule implementation
+
+### Tools & Technologies
+- Azure Portal & CLI
+- OCI Console & CLI
+- Linux networking tools (tcpdump, SSH)
+- Network troubleshooting methodologies
+
+### Problem-Solving
+- Systematic debugging of connectivity issues
+- Distinguishing network vs. OS-level problems
+- Cost-effective architecture design decisions
+
+---
 
 ## 📚 6. Key Learnings
 
