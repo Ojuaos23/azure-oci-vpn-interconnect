@@ -1,9 +1,9 @@
 # 🔵 Azure–Oracle Cloud Interconnect (IPSec VPN)
 
-![Project Status](https://img.shields.io/badge/status-completed-success)
-![Azure](https://img.shields.io/badge/Azure-VPN%20Gateway-0078D4)
-![Oracle Cloud](https://img.shields.io/badge/Oracle%20Cloud-IPSec-F80000)
-![Network](https://img.shields.io/badge/Networking-IPSec%20%7C%20BGP-blue)
+[![Project Status](https://img.shields.io/badge/status-completed-success)](https://github.com/Ojuaos23/azure-oci-vpn-interconnect)
+[![Azure](https://img.shields.io/badge/Azure-VPN%20Gateway-0078D4)](https://github.com/Ojuaos23/azure-oci-vpn-interconnect)
+[![Oracle Cloud](https://img.shields.io/badge/Oracle%20Cloud-IPSec-F80000)](https://github.com/Ojuaos23/azure-oci-vpn-interconnect)
+[![Network](https://img.shields.io/badge/Networking-IPSec%20%7C%20BGP-blue)](https://github.com/Ojuaos23/azure-oci-vpn-interconnect)
 
 ### Multicloud Networking Project – IPSec Tunnels, DRG, Route Tables, NSGs, and End-to-End Traffic Flow Verification
 
